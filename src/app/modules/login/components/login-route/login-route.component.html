@@ -1,1 +1,33 @@
-<p>login-route works!</p>
+<div>
+
+  <form
+    class="container"
+    [formGroup]="loginForm"
+    (ngSubmit)="login()">
+
+    <div *ngIf="errorMsg"
+         class="error-msg">
+      {{ errorMsg }}
+    </div>
+
+    <label>Username</label>
+    <input
+      matInput
+      type="text"
+      formControlName="username" />
+
+    <label>Password</label>
+    <input
+      matInput
+      type="password"
+      formControlName="password"/>
+
+    <button
+      type="submit"
+      mat-flat-button>
+      Login
+    </button>
+  </form>
+
+
+</div>

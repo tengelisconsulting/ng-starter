@@ -53,6 +53,7 @@ export class AppLoadService {
   ): void {
     // load permissions, anything else that goes in the state session
     this.sessionService.enterSession(sessionToken, []);
+    // I believe this is where we should apply the 'route before unauthed'
     this.router.navigate(this.DEFAULT_ROUTE_PATH);
   }
 
